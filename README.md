@@ -1,69 +1,172 @@
-# React + TypeScript + Vite
+# Daxin HomePage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个基于 Vue 3 + TypeScript + Vite 构建的个人主页项目，展示个人介绍、技能栈、项目作品等信息。
 
-Currently, two official plugins are available:
+## 功能简介
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+这是一个现代化的个人主页，包含以下核心模块：
 
-## Expanding the ESLint configuration
+- **首页 Hero**：个人介绍、职业标签轮播、社交链接
+- **作品展示**：横向滑动展示项目作品
+- **个人详情**：
+  - 工作地点地图展示
+  - 个人经历与理念
+  - 教育背景
+  - 开源项目介绍
+  - 技术栈技能云
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 技术栈
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
+- **前端框架**：Vue 3 + TypeScript
+- **构建工具**：Vite
+- **样式方案**：UnoCSS
+- **动画效果**：GSAP + AOS + @vueuse/motion
+- **地图组件**：高德地图 JS API
+- **图标**：Simple Icons + Iconify
+
+## 安装步骤
+
+### 环境要求
+
+- Node.js >= 18
+- pnpm >= 8
+
+### 快速开始
+
+```bash
+# 克隆项目
+git clone <repository-url>
+cd HomePage
+
+# 安装依赖
+pnpm install
+
+# 启动开发服务器
+pnpm dev
+```
+
+## 基本使用方法
+
+### 开发模式
+
+```bash
+pnpm dev
+```
+
+服务默认运行在 `http://localhost:5173`
+
+### 构建生产版本
+
+```bash
+pnpm build
+```
+
+构建产物将输出到 `dist` 目录
+
+### 本地预览生产版本
+
+```bash
+pnpm preview
+```
+
+### 代码检查
+
+```bash
+pnpm lint
+```
+
+## 主要特性
+
+- 响应式设计（仅支持桌面端访问）
+- 流畅的滚动动画效果
+- 3D 技能云展示
+- 无缝轮播图展示
+- 视差滚动效果
+- 文字分割动画
+
+## 项目结构
+
+```
+HomePage/
+├── src/
+│   ├── components/     # 页面组件
+│   │   ├── Header/     # 首页 Hero 区域
+│   │   ├── Swiper/     # 作品轮播
+│   │   ├── Info/       # 个人详情
+│   │   ├── Work/       # 项目展示
+│   │   └── Map/        # 地图组件
+│   ├── bits/           # 动画效果组件
+│   │   ├── LightRays/  # 光线效果
+│   │   ├── SplitText/  # 文字分割动画
+│   │   └── RotatingText/ # 轮播文字
+│   ├── ui/             # UI 组件
+│   │   └── IconCloud/  # 技能云
+│   ├── utils/          # 工具函数
+│   ├── styles/         # 全局样式
+│   └── App.vue         # 根组件
+├── public/             # 静态资源
+├── index.html
+├── package.json
+├── vite.config.ts      # Vite 配置
+├── uno.config.ts       # UnoCSS 配置
+└── tsconfig.json       # TypeScript 配置
+```
+
+## 必要的配置说明
+
+### 地图配置
+
+项目使用高德地图，需要在 `src/components/Map/index.vue` 中配置你的高德地图 Key：
+
+```typescript
+const staticMapUrl = 'https://apis.map.qq.com/ws/staticmap/v2/?center=121.56,29.86&zoom=11&size=800*400&maptype=roadmap&markers=type:large|color:0x539dfd|121.56,29.86|浙江宁波&key=YOUR_KEY'
+```
+
+### 个人信息配置
+
+修改 `src/components/Header/index.vue` 中的个人信息：
+
+- 姓名、职业标签
+- 个人博客链接
+- GitHub 链接
+- 头像地址
+
+### 作品数据配置
+
+修改 `src/components/Swiper/index.vue` 中的 `swiperItems` 数组来更新展示的项目：
+
+```typescript
+const swiperItems = ref<SwiperItem[]>([
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+    id: 1,
+    src: '项目截图URL',
+    title: '项目名称',
+    url: '项目链接',
   },
+  // ...
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 技能图标配置
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+修改 `src/components/Info/index.vue` 中的 `techIcons` 数组来更新技能云展示的图标：
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```typescript
+const techIcons = [
+  'vue', 'typescript', 'javascript',
+  // ...更多图标
+]
 ```
+
+## 浏览器支持
+
+- Chrome >= 90
+- Firefox >= 88
+- Safari >= 14
+- Edge >= 90
+
+**注意**：本项目仅支持桌面端访问，移动端会显示提示信息。
+
+## 开源协议
+
+[MIT](LICENSE)
