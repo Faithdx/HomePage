@@ -5,11 +5,16 @@ import './styles/global.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 
+declare global {
+  interface Window {
+    __disableAosRefresh: boolean
+  }
+}
+
 const app = createApp(App)
 
 app.mount('#app')
 
-// 初始化 AOS
 AOS.init({
   duration: 1000,
   once: true,
@@ -18,19 +23,19 @@ AOS.init({
   easing: 'ease-out-cubic',
 })
 
-// 在 DOM 更新后刷新 AOS
 app.config.globalProperties.$aos = AOS
 
-// 监听滚动事件，定期刷新 AOS
+window.__disableAosRefresh = false
+
 let scrollTimeout: ReturnType<typeof setTimeout> | null = null
 window.addEventListener('scroll', () => {
+  if (window.__disableAosRefresh) return
   if (scrollTimeout) clearTimeout(scrollTimeout)
   scrollTimeout = setTimeout(() => {
     AOS.refresh()
   }, 100)
 }, { passive: true })
 
-// 页面加载完成后刷新 AOS
 window.addEventListener('load', () => {
   AOS.refresh()
 })
