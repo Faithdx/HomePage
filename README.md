@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Daxin HomePage
 
 一个基于 Vue 3 + TypeScript + Vite 构建的个人主页项目，展示个人介绍、技能栈、项目作品等信息。
@@ -170,7 +169,5 @@ const techIcons = [
 
 ## 开源协议
 
-[MIT](LICENSE)
-=======
+# [MIT](LICENSE)
 
->>>>>>> 2a71f69a8ebe018069e99d9d8a67d4a057b80845
