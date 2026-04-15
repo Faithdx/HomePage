@@ -16,15 +16,15 @@ import {
 } from '@/config/resumeSections'
 
 const techIcons = [
-  'harmonyos', 'tauri', 'scss', 'css', 'html', 'unocss', 'axios', 'fetch', 'vue', 'vuex', 'redux',
+  'harmonyos', 'tauri', 'scss', 'css', 'html', 'sass', 'axios', 'fetch', 'vue', 'vuex',
   'element-plus', 'naive-ui', 'typescript', 'javascript', 'antdesign', 'motion',
-  'pinia', 'echarts', '.net', 'c#', '.net core', 'asp.net core', 'signalr', 'wpf', 'xaml', 'mvvm', 'maui',
+  'pinia', 'echarts', '.net', 'c#', '.net core', 'asp.net core', 'signalr', 'wpf', 'blazor', 'maui',
   'mysql', 'redis', 'sqlserver', 'mongodb',
-  'webpack', 'vite', 'nodedotjs', 'nextdotjs', 'prisma', 'express',
-  'python', 'flask', 'nginx', 'vercel', 'docker', 'git', 'github',
-  'visualstudiocode', 'intellijidea', 'visualstudio', 'cursor', 'trae', 'codebuddy', 'qcoder', 'apifox', 'postman',
-  'webstorm', 'navicat', 'hbuilder', 'hbuilderx',
-  'macos', 'windows', 'linux', 'wechat',
+  'webpack', 'vite', 'nodedotjs', 'jquery', 'bootstrap', 'layui',
+  'git', 'github',
+  'visualstudiocode', 'intellijidea', 'visualstudio', 'cursor', 'trae', 'apifox', 'postman',
+  'webstorm', 'navicat',
+  'macos', 'windows', 'linux',
 ]
 
 // 板块配置状态
@@ -48,42 +48,42 @@ const getSectionOrder = (sectionId: SectionId): number => {
 const workExperienceData = ref<WorkExperienceItem[]>([
   {
     id: 1,
-    period: '2023.06 - 至今',
-    company: '某科技公司',
-    position: '高级全栈工程师',
-    description: '负责公司核心产品的前后端架构设计与开发，带领团队完成多个重要项目交付。',
+    period: '2025.04 - 2026.03',
+    company: '陕西京创科技',
+    position: '全栈开发工程师',
+    description: '参与需求评审、接口方案设计、前后端编码、联调测试全流程，配合团队完成业务系统的功能迭代与上线。',
     achievements: [
-      '主导重构了公司核心系统，性能提升 40%',
-      '建立了前端工程化体系，提升团队开发效率 30%',
-      '设计并实现了微服务架构，支撑百万级用户访问'
+      '系统性学习 Vue3.x、.NET10、鸿蒙应用开发、大模型应用开发等前沿技术',
+      '基于 Tauri2.x + Vue3 独立完成跨平台客户端应用开发，覆盖 Windows、MacOS 多端适配',
+      '搭建个人技术储备体系，支撑跨场景开发需求响应'
     ],
-    technologies: ['Vue 3', '.NET Core', 'PostgreSQL', 'Redis', 'Docker']
+    technologies: ['Vue 3', 'Tauri', '.NET', 'HarmonyOS']
   },
   {
     id: 2,
-    period: '2021.03 - 2023.05',
-    company: '某互联网公司',
-    position: '前端开发工程师',
-    description: '参与公司电商平台的前端开发，负责多个业务模块的设计与实现。',
+    period: '2019.10 - 2025.03',
+    company: '天津市大光软件科技有限公司',
+    position: '.NET开发工程师',
+    description: '基于 ASP.NET Core、WebApi、EFCore 技术栈进行业务系统的后端接口开发与维护，负责多端开发和系统重构优化。',
     achievements: [
-      '独立完成了移动端 H5 商城的开发，日活用户 10w+',
-      '优化了首屏加载速度，从 3s 降至 1.2s',
-      '开发了通用组件库，被多个项目复用'
+      '负责 PC 端、移动端 Web 页面及移动 App 的开发、打包与发布',
+      '系统代码重构，优化数据库查询逻辑与接口响应速度',
+      '负责系统的日常维护、Bug 修复与版本迭代'
     ],
-    technologies: ['Vue 2/3', 'TypeScript', 'Webpack', 'Element UI']
+    technologies: ['ASP.NET Core', 'EF Core', 'Vue', 'WPF', 'SignalR']
   },
   {
     id: 3,
-    period: '2020.06 - 2021.02',
-    company: '某软件公司',
-    position: '.NET 开发工程师',
-    description: '负责企业级管理系统的后端开发，参与数据库设计和 API 开发。',
+    period: '2018.09 - 2019.09',
+    company: '北京环球中联投资咨询有限公司',
+    position: '前端开发工程师',
+    description: '负责 Web 产品的 PC 端、移动端页面开发，与 UI 团队配合实现响应式布局，完成页面动态效果与前后端数据交互。',
     achievements: [
-      '完成了 3 个企业级管理系统的后端开发',
-      '设计了高效的数据库结构，查询性能提升 50%',
-      '编写了完整的 API 文档和开发规范'
+      '实现页面动态效果与前后端数据交互，对接后端接口',
+      '完成图片上传、表单提交等核心功能的开发与调试',
+      '完成页面兼容性测试与适配，覆盖 Chrome、Firefox、IE11 等主流浏览器'
     ],
-    technologies: ['.NET Core', 'SQL Server', 'Entity Framework', 'Redis']
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'LayUI']
   }
 ])
 
@@ -91,44 +91,83 @@ const workExperienceData = ref<WorkExperienceItem[]>([
 const projectExperienceData = ref<ProjectExperienceItem[]>([
   {
     id: 1,
-    period: '2024.01 - 至今',
-    name: 'NotePin 便笺应用',
-    role: '独立开发者',
-    description: '一款跨平台的便笺应用，支持 Web、桌面端和移动端，致力于提供简洁高效的笔记体验。',
+    period: '2024.04 - 2025.03',
+    name: 'AI赛马竞猜平台',
+    role: '.NET开发工程师',
+    description: '集赛马赛事直播、AI赛果预测、投注交易、社区互动于一体的综合型竞猜平台，面向赛马爱好者提供一站式赛事参与服务。',
     achievements: [
-      '独立完成全栈开发，包括 Web 端、桌面端和移动端',
-      '实现了实时同步功能，支持多设备数据同步',
-      '用户量突破 5000+，获得良好口碑'
+      '独立完成PC端、移动端落地页开发，实现全端响应式布局适配',
+      '负责登录注册、个人信息管理、赛事信息展示、投注交易、论坛互动等核心模块开发',
+      '基于ML.NET搭建赛马结果预测模型，整合历史赛事数据完成模型训练与调优'
     ],
-    technologies: ['Vue 3', 'Tauri', 'TypeScript', '.NET Core', 'PostgreSQL'],
-    link: 'https://clipnotre.com'
+    technologies: ['Vue 3', 'Layui-vue', 'ASP.NET Core', 'EFCore', 'SignalR', 'ML.NET']
   },
   {
     id: 2,
-    period: '2023.08 - 2023.12',
-    name: 'ThriveX 博客管理系统',
-    role: '开源贡献者',
-    description: '一个现代化的博客管理系统，包含前端展示和控制端管理，支持多种内容类型。',
+    period: '2023.03 - 2024.03',
+    name: '韩国股票交易平台',
+    role: '.NET开发工程师',
+    description: '面向韩国C端用户的标准化股票交易系统，核心覆盖实时行情查询、在线交易下单、全生命周期订单管理等业务功能。',
     achievements: [
-      '参与了控制端的开发，实现了文章管理和用户权限模块',
-      '优化了前端性能，提升了页面加载速度',
-      '获得 GitHub 500+ Stars'
+      '负责个人信息管理、钱包模块、交易页面、订单管理等模块的页面布局与交互逻辑开发',
+      '对接股票行情数据源，完成高并发场景下的接口与查询逻辑调优',
+      '重构数据库慢查询逻辑，新增接口限流、事务锁机制，解决高并发下的订单超卖问题'
     ],
-    technologies: ['Vue 3', 'TypeScript', 'Vite', 'Naive UI'],
-    link: 'https://github.com/LiuYuYang01/Thrive-Admin'
+    technologies: ['Vue 3', 'Vuetify', 'ASP.NET Core', 'EFCore', 'SignalR', 'MySQL']
   },
   {
     id: 3,
-    period: '2023.03 - 2023.07',
-    name: '智能教育平台',
-    role: '全栈开发',
-    description: '为教育机构开发的一站式管理平台，包含家长端、用户端和管理后台三个子系统。',
+    period: '2022.08 - 2023.02',
+    name: '在线营销短信平台',
+    role: '.NET开发工程师',
+    description: '面向企业客户的SaaS类在线营销短信服务平台，支持文本短信、多媒体短信、国际短信三类发送场景。',
     achievements: [
-      '独立完成了三个子系统的架构设计和开发',
-      '实现了多端数据互通和实时通知功能',
-      '系统稳定运行，服务 1000+ 家庭用户'
+      '负责第三方短信服务商的接口对接及核心功能开发，保障短信链路的稳定性',
+      '适配阿里云、云片等5家主流第三方短信服务商接口，实现短信发送、状态回调、计费统计全链路功能',
+      '基于WPF + HandyControl开发Windows桌面客户端，实现登录注册、短信批量发送、发送记录查询等功能'
     ],
-    technologies: ['Vue 3', '.NET Core', 'SignalR', 'MySQL', 'Redis']
+    technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core', 'EFCore', 'SignalR', 'WPF']
+  },
+  {
+    id: 4,
+    period: '2021.11 - 2022.07',
+    name: '漫画在线阅读平台',
+    role: '.NET开发工程师',
+    description: '面向韩国年轻用户群体的漫画在线阅读社区，涵盖漫画阅读、评论收藏、社区互动等核心功能。',
+    achievements: [
+      '负责项目前端技术架构搭建，完成登录注册、漫画阅读、个人中心、论坛模块等核心业务页面开发',
+      '设计并实现帖子分类、发布、编辑、评论、多级权限管理等全链路论坛功能',
+      '搭建后台管理系统的用户管理、漫画资源管理、论坛内容审核模块'
+    ],
+    technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core MVC', 'MySQL']
+  },
+  {
+    id: 5,
+    period: '2020.11 - 2021.10',
+    name: '虚拟币交易平台',
+    role: '.NET开发工程师',
+    description: '面向韩国市场的多币种虚拟币交易平台，支持中、英、韩三种语言，提供安全、稳定、低延迟的交易服务。',
+    achievements: [
+      '负责用户中心、钱包管理等核心业务模块的功能设计与代码实现',
+      '基于SignalR实现实时行情推送、交易记录实时同步，通过消息队列削峰、增量数据推送降低传输延迟',
+      '开发钱包管理全链路功能，覆盖钱包开通、充值提现、贷款还款等12个核心场景',
+      '基于Blazor + MudBlazor搭建定制化加密币行情展示模块'
+    ],
+    technologies: ['Vue', 'Vuetify', 'Blazor', 'MudBlazor', 'ASP.NET Core', 'EFCore', 'MySQL', 'SignalR']
+  },
+  {
+    id: 6,
+    period: '2019.10 - 2020.10',
+    name: '韩国期货交易平台',
+    role: '前端开发工程师',
+    description: '面向韩国中小期货投资者的专业交易平台，覆盖Web端、WinForm客户端，包含期货实时行情查看、在线交易下单等功能。',
+    achievements: [
+      '负责Web端交易平台的页面开发与交互逻辑落地，对接后端服务接口',
+      '承担Web端与WinForm客户端的性能优化、问题修复工作',
+      '负责公司官方网站的开发工作，适配PC、移动端不同尺寸完成多端适配',
+      '负责移动端APK的打包、测试、上线发布及后续维护'
+    ],
+    technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core', 'EF Core', 'SignalR']
   }
 ])
 
@@ -170,6 +209,12 @@ watch(sectionConfig, () => {
       </div>
 
       <div data-aos="fade-up" data-aos-duration="1000">
+        <p class="text-white text-3xl leading-14 mt-6">
+          机械设计制造及其自动化专业
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1000">
         <img
           src="https://miaobi-lite.bj.bcebos.com/miaobi/5mao/b%275YWw5bee6ZOB6YGT5a2m6ZmiXzE3MjY3MjI2NzcuMTI2NQ%3D%3D%27/0.png"
           alt="" class="min-h-[200px] w-full mt-16 mb-36 rounded-2xl" />
@@ -177,7 +222,7 @@ watch(sectionConfig, () => {
 
       <div data-aos="fade-up" data-aos-duration="1000">
         <p class="text-white text-3xl leading-14 mt-6">
-          它并不是专业的计算学院
+          它并不是专业的计算机学院
         </p>
       </div>
 
@@ -327,14 +372,14 @@ watch(sectionConfig, () => {
     <div id="skills" v-if="isSectionVisible('skills')" class="max-w-5xl mx-auto mt-[400px] space-y-[50px]" :style="{ order: getSectionOrder('skills') }">
       <div data-aos="fade-up" data-aos-duration="1000">
         <p class="text-white text-3xl leading-14">
-          下面是我的 <b class="text-yellow-300">毕生所学</b>
+          下面是我的 <b class="text-yellow-300">专业技能</b>
         </p>
       </div>
 
       <div data-aos="fade-up" data-aos-duration="1000">
         <p class="text-white text-3xl leading-14 mt-6 mb-[100px]">
-          其中我最喜欢的一套组合是：<b class="text-[#8DD5F8]">Vue</b> <span class="px-1">+</span>
-          <b class="text-primary">.NET Core</b>
+          6年以上IT开发经验，精通 <b class="text-[#8DD5F8]">Vue</b> <span class="px-1">+</span>
+          <b class="text-primary">.NET Core</b> 全栈开发
         </p>
       </div>
 
@@ -350,14 +395,14 @@ watch(sectionConfig, () => {
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
         <!-- 邮箱 -->
-        <a href="mailto:3311118881@qq.com" class="contact-card group">
+        <a href="mailto:daxin.he@qq.com" class="contact-card group">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-8 h-8">
               <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <h3 class="contact-title">邮箱</h3>
-          <p class="contact-info">3311118881@qq.com</p>
+          <p class="contact-info">daxin.he@qq.com</p>
         </a>
 
         <!-- GitHub -->
