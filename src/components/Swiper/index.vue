@@ -12,14 +12,14 @@ const swiperItems = ref<SwiperItem[]>([
   {
     id: 1,
     src: 'https://bu.dusays.com/2025/08/29/68b16f22981d4.jpg',
-    title: 'ThriveX 博客管理系统 - 控制端（新版）',
-    url: 'https://github.com/LiuYuYang01/ThriveX-Admin',
+    title: 'NotePin 便笺应用 - web 端官网',
+    url: 'https://clipnotre.com',
   },
   {
     id: 2,
     src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
-    title: 'ThriveX 博客管理系统 - 前端',
-    url: 'https://github.com/LiuYuYang01/ThriveX-Blog',
+    title: 'NotePin 便笺应用 - 客户端',
+    url: 'https://github.com/Faithdx/quicknote-pc',
   },
   {
     id: 3,
@@ -30,39 +30,33 @@ const swiperItems = ref<SwiperItem[]>([
   {
     id: 4,
     src: 'https://bu.dusays.com/2024/09/18/66ea606eb5aa1.png',
-    title: '云上校园项目 - 用户端',
-    url: 'https://daxin.net',
+    title: '个人主页 - web 网站',
+    url: 'https://blog.hedaxin.top',
   },
   {
     id: 5,
     src: 'https://bu.dusays.com/2024/09/18/66ea605d89df7.png',
-    title: '云上校园项目 - 控制端',
+    title: '智能教育 - 家长端',
     url: 'https://daxin.net',
   },
   {
     id: 6,
     src: 'https://bu.dusays.com/2025/08/29/68b16f22981d4.jpg',
-    title: '占位图',
+    title: '智能教育 - 用户端',
     url: 'https://daxin.net',
   },
   {
     id: 7,
     src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
-    title: '占位图',
+    title: '智能教育 - 管理后台',
     url: 'https://daxin.net',
   },
   {
     id: 8,
     src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
-    title: '占位图',
+    title: 'AI 智能简历',
     url: 'https://daxin.net',
-  },
-  {
-    id: 9,
-    src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
-    title: '占位图',
-    url: 'https://daxin.net',
-  },
+  }  
 ])
 
 const currentIndex = ref(2)

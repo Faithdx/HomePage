@@ -9,7 +9,7 @@ import ScrollAnimatedHeading from '../ScrollAnimatedHeading/index.vue'
 const techIcons = [
   'harmonyos', 'tauri', 'scss', 'css', 'html', 'unocss', 'axios', 'fetch', 'vue', 'vuex', 'redux',
   'element-plus', 'naive-ui','typescript', 'javascript', 'antdesign', 'motion',
-  'pinia', 'echarts', '.net', 'c#', '.net core', 'asp.net core','wpf','xaml','mvvm','maui',
+  'pinia', 'echarts', '.net', 'c#', '.net core', 'asp.net core','signalr','wpf','xaml','mvvm','maui',
   'mysql', 'redis', 'sqlserver', 'mongodb',
   'webpack', 'vite', 'nodedotjs', 'nextdotjs', 'prisma', 'express',
   'python', 'flask', 'nginx', 'vercel', 'docker', 'git', 'github',
