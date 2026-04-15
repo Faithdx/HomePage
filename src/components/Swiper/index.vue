@@ -9,54 +9,49 @@ interface SwiperItem {
 }
 
 const swiperItems = ref<SwiperItem[]>([
+
+  {
+    id: 2,
+    src: 'src/assets/images/notePin 客户端.png',
+    title: 'NotePin 便笺应用 - 客户端',
+    url: 'https://clipnote.com',
+  },
   {
     id: 1,
-    src: 'https://bu.dusays.com/2025/08/29/68b16f22981d4.jpg',
+    src: 'src/assets/images/notePin-web.png',
     title: 'NotePin 便笺应用 - web 端官网',
     url: 'https://clipnotre.com',
   },
   {
-    id: 2,
-    src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
-    title: 'NotePin 便笺应用 - 客户端',
-    url: 'https://github.com/Faithdx/quicknote-pc',
-  },
-  {
     id: 3,
-    src: 'https://bu.dusays.com/2024/09/17/66e96ca781d49.png',
-    title: 'ThriveX 博客管理系统 - 控制端（旧版）',
-    url: 'https://github.com/LiuYuYang01/Thrive-Admin',
+    src: 'src/assets/images/个人主页.png',
+    title: '个人主页 - web 网站',
+    url: 'https://my.hedaxin.top',
   },
   {
     id: 4,
-    src: 'https://bu.dusays.com/2024/09/18/66ea606eb5aa1.png',
-    title: '个人主页 - web 网站',
-    url: 'https://blog.hedaxin.top',
-  },
-  {
-    id: 5,
-    src: 'https://bu.dusays.com/2024/09/18/66ea605d89df7.png',
+    src: 'src/assets/images/托管登录.png',
     title: '智能教育 - 家长端',
     url: 'https://daxin.net',
   },
+
   {
     id: 6,
-    src: 'https://bu.dusays.com/2025/08/29/68b16f22981d4.jpg',
-    title: '智能教育 - 用户端',
-    url: 'https://daxin.net',
-  },
-  {
-    id: 7,
-    src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
+    src: 'src/assets/images/notePin-web-3.png',
     title: '智能教育 - 管理后台',
     url: 'https://daxin.net',
   },
   {
-    id: 8,
-    src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg',
+    id: 7,
+    src: 'src/assets/images/智能简历.png',
     title: 'AI 智能简历',
     url: 'https://daxin.net',
-  }  
+  }, {
+    id: 5,
+    src: 'src/assets/images/tuoguan-后台.png',
+    title: '智能教育 - 用户端',
+    url: 'https://daxin.net',
+  },
 ])
 
 const currentIndex = ref(2)
@@ -109,24 +104,13 @@ onUnmounted(() => {
   <div ref="containerRef" class="swiper-container">
     <h1 class="text-white text-3xl text-center relative top-32">我的作品 🥳</h1>
 
-    <div 
-      class="banner" 
-      @mouseenter="isHovering = true" 
-      @mouseleave="isHovering = false"
-    >
-      <div
-        class="img-wrapper"
-        :style="{
-          transform: `translateX(-${currentIndex * (25 + 1.78)}vw)`,
-          transition: isHovering ? 'none' : 'transform 0.5s ease',
-        }"
-      >
-        <div 
-          v-for="(item, index) in duplicatedItems" 
-          :key="`${item.id}-${index}`" 
-          class="img-box" 
-          @click="openUrl(item.url)"
-        >
+    <div class="banner" @mouseenter="isHovering = true" @mouseleave="isHovering = false">
+      <div class="img-wrapper" :style="{
+        transform: `translateX(-${currentIndex * (25 + 1.78)}vw)`,
+        transition: isHovering ? 'none' : 'transform 0.5s ease',
+      }">
+        <div v-for="(item, index) in duplicatedItems" :key="`${item.id}-${index}`" class="img-box"
+          @click="openUrl(item.url)">
           <div class="info">
             <h3>{{ item.title }}</h3>
           </div>
@@ -138,13 +122,15 @@ onUnmounted(() => {
     <div class="btn-group">
       <button class="last btn" @click="handlePrev">
         <svg class="icon left" viewBox="0 0 1024 1024" width="128" height="128">
-          <path d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z" />
+          <path
+            d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z" />
         </svg>
       </button>
 
       <button class="next btn" @click="handleNext">
         <svg class="icon right" viewBox="0 0 1024 1024" width="128" height="128">
-          <path d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z" />
+          <path
+            d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z" />
         </svg>
       </button>
     </div>
@@ -261,7 +247,7 @@ onUnmounted(() => {
   z-index: 10;
 }
 
-.swiper-container .banner:hover ~ .btn-group,
+.swiper-container .banner:hover~.btn-group,
 .swiper-container .btn-group:hover {
   opacity: 1;
 }

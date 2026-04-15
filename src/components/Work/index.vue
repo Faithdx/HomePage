@@ -1,3 +1,15 @@
+<template>
+  <div class="relative overflow-hidden py-8" @mouseenter="isPaused = true" @mouseleave="isPaused = false">
+    <div ref="stripRef" class="flex gap-6 whitespace-nowrap" style="will-change: transform">
+      <div v-for="(image, index) in galleryImages" :key="index"
+        class="w-[650px] rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+        <img :src="image.src" :alt="image.alt"
+          class="w-full h-90 object-cover hover:scale-105 transition-transform duration-500" />
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
@@ -14,20 +26,15 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   scrollSpeed: 2,
   images: () => [
-    { src: 'https://bu.dusays.com/2025/08/09/689624f3698af.jpg', alt: 'Image 14' },
-    { src: 'https://bu.dusays.com/2025/08/09/6896247e7aaf6.jpg', alt: 'Image 13' },
-    { src: 'https://bu.dusays.com/2025/08/09/689623fe118af.jpg', alt: 'Image 2' },
-    { src: 'https://bu.dusays.com/2025/08/09/6896246086c01.jpg', alt: 'Image 6' },
-    { src: 'https://bu.dusays.com/2025/08/09/689624cac990f.jpg', alt: 'Image 11' },
-    { src: 'https://bu.dusays.com/2025/08/09/6896247f92f1f.jpg', alt: 'Image 10' },
-    { src: 'https://bu.dusays.com/2025/08/09/689624d0475a5.jpg', alt: 'Image 12' },
-    { src: 'https://bu.dusays.com/2025/08/09/6896240e1153a.jpg', alt: 'Image 9' },
-    { src: 'https://bu.dusays.com/2025/08/09/689624670f0f7.jpg', alt: 'Image 8' },
-    { src: 'https://bu.dusays.com/2025/08/09/6896246546c88.jpg', alt: 'Image 7' },
-    { src: 'https://bu.dusays.com/2025/08/09/689624592b4bf.jpg', alt: 'Image 5' },
-    { src: 'https://bu.dusays.com/2025/08/09/6896245875d65.jpg', alt: 'Image 4' },
-    { src: 'https://bu.dusays.com/2025/08/09/68962457e423c.jpg', alt: 'Image 3' },
-    { src: 'https://bu.dusays.com/2025/08/09/689623fc681f2.jpg', alt: 'Image 1' },
+    { src: 'src/assets/images/notePin 客户端.png', alt: 'Image 9' },
+    { src: 'src/assets/images/notePin-web-5.png', alt: 'Image 8' },
+    { src: 'src/assets/images/notePin-web-4.png', alt: 'Image 7' },
+    { src: 'src/assets/images/notePin-web-3.png', alt: 'Image 6' },
+    { src: 'src/assets/images/notePin-web-5.png', alt: 'Image 5' },
+    { src: 'src/assets/images/notePin-web-4.png', alt: 'Image 4' },
+    { src: 'src/assets/images/notePin-web-3.png', alt: 'Image 3' },
+    { src: 'src/assets/images/notePin-web-2.png', alt: 'Image 2' },
+    { src: 'src/assets/images/notePin-web.png', alt: 'Image 1' },
   ]
 })
 
@@ -80,29 +87,3 @@ onUnmounted(() => {
   }
 })
 </script>
-
-<template>
-  <div
-    class="relative overflow-hidden py-8"
-    @mouseenter="isPaused = true"
-    @mouseleave="isPaused = false"
-  >
-    <div
-      ref="stripRef"
-      class="flex gap-6 whitespace-nowrap"
-      style="will-change: transform"
-    >
-      <div
-        v-for="(image, index) in galleryImages"
-        :key="index"
-        class="w-[650px] rounded-lg overflow-hidden shadow-xl flex-shrink-0"
-      >
-        <img
-          :src="image.src"
-          :alt="image.alt"
-          class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-        />
-      </div>
-    </div>
-  </div>
-</template>
