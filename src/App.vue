@@ -3,6 +3,7 @@ import { onMounted } from 'vue'
 import Header from './components/Header/index.vue'
 import Swiper from './components/Swiper/index.vue'
 import Info from './components/Info/index.vue'
+import StickyNavbar from './components/StickyNavbar/index.vue'
 
 onMounted(() => {
   // 检查是否为移动端设备
@@ -18,6 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <StickyNavbar />
   <Header />
   <Swiper />
   <Info />

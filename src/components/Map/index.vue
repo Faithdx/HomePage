@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const mapContainer = ref<HTMLElement>()
 const mapLoaded = ref(false)
 const mapError = ref(false)
 
-// 使用静态地图作为备选
-const staticMapUrl = 'https://apis.map.qq.com/ws/staticmap/v2/?center=121.56,29.86&zoom=11&size=800*400&maptype=roadmap&markers=type:large|color:0x539dfd|121.56,29.86|浙江宁波&key=YOUR_KEY'
+
 
 onMounted(() => {
   // 尝试加载高德地图

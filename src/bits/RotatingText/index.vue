@@ -43,7 +43,7 @@ onUnmounted(() => {
   if (timer) clearInterval(timer)
 })
 
-const getCharStyle = (charIndex: number, totalChars: number) => {
+const getCharStyle = (charIndex: number) => {
   const delay = charIndex * props.staggerDuration
   return {
     transitionDelay: `${delay}s`,
@@ -62,7 +62,7 @@ const getCharStyle = (charIndex: number, totalChars: number) => {
       <span
         v-for="(char, charIndex) in texts[currentIndex].split('')"
         :key="charIndex"
-        :style="getCharStyle(charIndex, texts[currentIndex].length)"
+        :style="getCharStyle(charIndex)"
         class="inline-block transition-all duration-300"
         :class="{
           'translate-y-full opacity-0': isAnimatingOut,

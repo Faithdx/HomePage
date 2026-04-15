@@ -39,14 +39,14 @@ onMounted(() => {
   if (props.splitType === 'chars') {
     // 分割为字符
     const chars = text.split('')
-    el.innerHTML = chars.map((char, i) => 
+    el.innerHTML = chars.map((char) =>
       `<span class="split-char inline-block" style="opacity: 0; transform: translateY(40px)">${char === ' ' ? '&nbsp;' : char}</span>`
     ).join('')
     elements = Array.from(el.querySelectorAll('.split-char'))
   } else if (props.splitType === 'words') {
     // 分割为单词
     const words = text.split(' ')
-    el.innerHTML = words.map((word, i) => 
+    el.innerHTML = words.map((word) =>
       `<span class="split-word inline-block mr-2" style="opacity: 0; transform: translateY(40px)">${word}</span>`
     ).join('')
     elements = Array.from(el.querySelectorAll('.split-word'))
