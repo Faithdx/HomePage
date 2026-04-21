@@ -12,43 +12,43 @@ const swiperItems = ref<SwiperItem[]>([
 
   {
     id: 2,
-    src: 'src/assets/images/notePin 客户端.png',
+    src: '/images/notePin客户端.png',
     title: 'NotePin 便笺应用 - 客户端',
     url: 'https://clipnote.com',
   },
   {
     id: 1,
-    src: 'src/assets/images/notePin-web.png',
+    src: '/images/notePin-web.png',
     title: 'NotePin 便笺应用 - web 端官网',
     url: 'https://clipnotre.com',
   },
   {
     id: 3,
-    src: 'src/assets/images/个人主页.png',
+    src: '/images/个人主页.png',
     title: '个人主页 - web 网站',
     url: 'https://my.hedaxin.top',
   },
   {
     id: 4,
-    src: 'src/assets/images/托管登录.png',
+    src: '/images/托管登录.png',
     title: '智能教育 - 家长端',
     url: 'https://daxin.net',
   },
 
   {
     id: 6,
-    src: 'src/assets/images/notePin-web-3.png',
+    src: '/images/notePin-web-3.png',
     title: '智能教育 - 管理后台',
     url: 'https://daxin.net',
   },
   {
     id: 7,
-    src: 'src/assets/images/智能简历.png',
+    src: '/images/智能简历.png',
     title: 'AI 智能简历',
     url: 'https://daxin.net',
   }, {
     id: 5,
-    src: 'src/assets/images/tuoguan-后台.png',
+    src: '/images/tuoguan-后台.png',
     title: '智能教育 - 用户端',
     url: 'https://daxin.net',
   },

@@ -1,16 +1,3 @@
-<script setup lang="ts">
-import LightRays from '@/bits/LightRays/index.vue'
-import SplitText from '@/bits/SplitText/index.vue'
-import RotatingText from '@/bits/RotatingText/index.vue'
-
-const scrollToNext = () => {
-  window.scrollTo({
-    top: window.innerHeight,
-    behavior: 'smooth'
-  })
-}
-</script>
-
 <template>
   <div class="relative w-full h-screen text-white overflow-hidden">
     <LightRays rays-origin="top-center" rays-color="#fff" :light-spread="2" />
@@ -78,3 +65,16 @@ const scrollToNext = () => {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import LightRays from '@/bits/LightRays/index.vue'
+import SplitText from '@/bits/SplitText/index.vue'
+import RotatingText from '@/bits/RotatingText/index.vue'
+
+const scrollToNext = () => {
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: 'smooth'
+  })
+}
+</script>

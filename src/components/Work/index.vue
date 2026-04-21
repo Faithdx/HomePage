@@ -26,15 +26,15 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   scrollSpeed: 2,
   images: () => [
-    { src: 'src/assets/images/notePin 客户端.png', alt: 'Image 9' },
-    { src: 'src/assets/images/notePin-web-5.png', alt: 'Image 8' },
-    { src: 'src/assets/images/notePin-web-4.png', alt: 'Image 7' },
-    { src: 'src/assets/images/notePin-web-3.png', alt: 'Image 6' },
-    { src: 'src/assets/images/notePin-web-5.png', alt: 'Image 5' },
-    { src: 'src/assets/images/notePin-web-4.png', alt: 'Image 4' },
-    { src: 'src/assets/images/notePin-web-3.png', alt: 'Image 3' },
-    { src: 'src/assets/images/notePin-web-2.png', alt: 'Image 2' },
-    { src: 'src/assets/images/notePin-web.png', alt: 'Image 1' },
+    { src: '/images/notePin客户端.png', alt: 'Image 9' },
+    { src: '/images/notePin-web-5.png', alt: 'Image 8' },
+    { src: '/images/notePin-web-4.png', alt: 'Image 7' },
+    { src: '/images/notePin-web-3.png', alt: 'Image 6' },
+    { src: '/images/notePin-web-5.png', alt: 'Image 5' },
+    { src: '/images/notePin-web-4.png', alt: 'Image 4' },
+    { src: '/images/notePin-web-3.png', alt: 'Image 3' },
+    { src: '/images/notePin-web-2.png', alt: 'Image 2' },
+    { src: '/images/notePin-web.png', alt: 'Image 1' },
   ]
 })
 
