@@ -36,11 +36,11 @@
           alt="" class="min-h-[200px] w-full mt-16 mb-36 rounded-2xl" />
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <!-- <div data-aos="fade-up" data-aos-duration="1000">
         <p class="text-white text-3xl leading-14 mt-6">
           它并不是专业的计算机学院
         </p>
-      </div>
+      </div> -->
 
       <div data-aos="fade-up" data-aos-duration="1000">
         <p class="text-white text-3xl leading-14 mt-6">
