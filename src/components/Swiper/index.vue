@@ -11,46 +11,77 @@ interface SwiperItem {
 const swiperItems = ref<SwiperItem[]>([
 
   {
-    id: 2,
+    id: 1,
     src: '/images/notePin客户端.png',
     title: 'NotePin 便笺应用 - 客户端',
     url: 'https://clipnote.com',
   },
   {
-    id: 1,
+    id: 2,
+    src: '/images/flownote_web-2.png',
+    title: 'FlowNote 笔记应用 - 待办管理',
+    url: 'https://clipote.com/#feature',
+  },
+  {
+    id: 3,
+    src: '/images/flownote_web-3.png',
+    title: 'FlowNote 笔记应用 - AI 能力',
+    url: 'https://clipote.com/#ai',
+  },
+  {
+    id: 4,
+    src: '/images/flownote_web-4.png',
+    title: 'FlowNote 笔记应用 - 编辑体验',
+    url: 'https://clipote.com',
+  },
+    {
+    id: 10,
+    src: '/images/flownote_web.png',
+    title: 'FlowNote 笔记应用 - web 端官网',
+    url: 'https://clipote.com',
+  },
+  {
+    id: 5,
     src: '/images/notePin-web.png',
     title: 'NotePin 便笺应用 - web 端官网',
     url: 'https://clipnotre.com',
   },
   {
-    id: 3,
+    id: 6,
     src: '/images/个人主页.png',
     title: '个人主页 - web 网站',
     url: 'https://my.hedaxin.top',
   },
   {
-    id: 4,
-    src: '/images/托管登录.png',
-    title: '智能教育 - 家长端',
-    url: 'https://daxin.net',
+    id: 7,
+    src: '/images/天枢_web.png',
+    title: '天枢应用 - web 端官网',
+    url: 'https://tianshu.xinqimap.com',
   },
 
   {
-    id: 6,
+    id: 8,  
     src: '/images/notePin-web-3.png',
-    title: '智能教育 - 管理后台',
-    url: 'https://daxin.net',
+    title: 'NotePin 便笺应用 - 功能说明',
+    url: 'https://clipnote.com/#feature',
   },
   {
-    id: 7,
-    src: '/images/智能简历.png',
-    title: 'AI 智能简历',
-    url: 'https://daxin.net',
-  }, {
-    id: 5,
-    src: '/images/tuoguan-后台.png',
-    title: '智能教育 - 用户端',
-    url: 'https://daxin.net',
+    id: 9,
+    src: '/images/flownote_mac.png',
+    title: 'FlowNote 笔记应用 - mac Mac 客户端',
+    url: 'https://clipote.com',
+  },
+  {
+    id: 11,
+    src: '/images/天枢_web-2.png',
+    title: '天枢应用 - web 端官网',
+    url: 'https://tianshu.xinqimap.com',
+  },
+  {
+    id: 12,
+    src: '/images/flownote_mac-2.png',
+    title: 'FlowNote 笔记应用 - 功能说明',
+    url: 'https://clipote.com/#download',
   },
 ])
 
