@@ -100,7 +100,7 @@ onMounted(() => {
             <p class="timeline-description">{{ item.description }}</p>
             
             <div class="timeline-achievements">
-              <div class="achievements-title">主要成就：</div>
+              <div class="achievements-title">核心职责与成果：</div>
               <ul>
                 <li v-for="(achievement, i) in item.achievements" :key="i">
                   {{ achievement }}

@@ -141,7 +141,7 @@
 
         <div data-aos="fade-up" data-aos-duration="1000">
           <p class="text-white text-3xl leading-14 mt-6">
-            👨‍💻 目前正在全力投入 <b class="text-primary">NotePin </b> 项目的研发
+            👨‍💻 目前正在全力投入 <a class="text-primary" href="https://clipote.com" target="_blank" rel="noopener noreferrer">FlowNote </a> 项目的研发
           </p>
         </div>
 
@@ -163,16 +163,16 @@
 
         <div class="ml-[-350px]">
           <Work
-            :images="[              
-              { src: '/images/notePin-web.png', alt: 'Image 1' },
-              { src: '/images/notePin-web-2.png', alt: 'Image 2' },
-              { src: '/images/notePin-web-3.png', alt: 'Image 3' },
-              { src: '/images/notePin-web-4.png', alt: 'Image 4' },                           
-              { src: '/images/notePin-web-5.png', alt: 'Image 5' },
-              { src: '/images/notePin-web-3.png', alt: 'Image 6' },
-              { src: '/images/notePin-web-4.png', alt: 'Image 7' },   
-              { src: '/images/notePin-web-5.png', alt: 'Image 8' }, 
-              { src: '/images/notePin客户端.png', alt: 'Image 9' },
+            :images="[
+              { src: '/images/flownote-hero.png', alt: 'FlowNote 官网首页' },
+              { src: '/images/flownote-features.png', alt: 'FlowNote 核心功能' },
+              { src: '/images/flownote-todo.png', alt: 'FlowNote 待办工作流' },
+              { src: '/images/flownote-ai.png', alt: 'FlowNote AI 能力' },
+              { src: '/images/flownote-editor.png', alt: 'FlowNote 块编辑器' },
+              { src: '/images/flownote-mindmap.png', alt: 'FlowNote 思维导图' },
+              { src: '/images/flownote-share.png', alt: 'FlowNote 在线分享' },
+              { src: '/images/flownote-download.png', alt: 'FlowNote 多端下载' },
+              { src: '/images/flownote-pricing.png', alt: 'FlowNote 价格方案' },
             ]"
           />
         </div>
@@ -292,42 +292,30 @@ const getSectionOrder = (sectionId: SectionId): number => {
 const workExperienceData = ref<WorkExperienceItem[]>([
   {
     id: 1,
-    period: '2025.04 - 2026.03',
-    company: '陕西京创科技',
-    position: '全栈开发工程师',
-    description: '参与需求评审、接口方案设计、前后端编码、联调测试全流程，配合团队完成业务系统的功能迭代与上线。',
+    period: '2020.09 - 2026.08',
+    company: '天津市大光软件科技有限公司',
+    position: '.NET 开发工程师',
+    description: '以 .NET 技术栈承接业务系统的接口与数据层开发，同时负责前端项目的技术选型、框架搭建与页面功能落地。',
     achievements: [
-      '系统性学习 Vue3.x、.NET10、鸿蒙应用开发、大模型应用开发等前沿技术',
-      '基于 Tauri2.x + Vue3 独立完成跨平台客户端应用开发，覆盖 Windows、MacOS 多端适配',
-      '搭建个人技术储备体系，支撑跨场景开发需求响应'
+      '负责前端项目的技术选型、框架搭建，以及各页面、功能的开发与数据交互',
+      '负责与前端对接的数据接口开发与维护，并参与部分数据库设计',
+      '负责系统日常维护、Bug 修复与版本迭代，保障线上业务稳定运行',
+      '先后承担韩国股票交易平台、在线营销短信平台、漫画在线阅读平台、AI 赛马竞猜平台等项目的开发交付'
     ],
-    technologies: ['Vue 3', 'Tauri', '.NET', 'HarmonyOS']
+    technologies: ['.NET Core', 'ASP.NET Core', 'EF Core', 'SignalR', 'ML.NET', 'Vue 3', 'Vuetify', 'Sass', 'WPF']
   },
   {
     id: 2,
-    period: '2019.10 - 2025.03',
-    company: '天津市大光软件科技有限公司',
-    position: '.NET开发工程师',
-    description: '基于 ASP.NET Core、WebApi、EFCore 技术栈进行业务系统的后端接口开发与维护，负责多端开发和系统重构优化。',
-    achievements: [
-      '负责 PC 端、移动端 Web 页面及移动 App 的开发、打包与发布',
-      '系统代码重构，优化数据库查询逻辑与接口响应速度',
-      '负责系统的日常维护、Bug 修复与版本迭代'
-    ],
-    technologies: ['ASP.NET Core', 'EF Core', 'Vue', 'WPF', 'SignalR']
-  },
-  {
-    id: 3,
-    period: '2018.09 - 2019.09',
+    period: '2019.08 - 2020.09',
     company: '北京环球中联投资咨询有限公司',
     position: '前端开发工程师',
-    description: '负责 Web 产品的 PC 端、移动端页面开发，与 UI 团队配合实现响应式布局，完成页面动态效果与前后端数据交互。',
+    description: '负责公司 Web 产品的页面开发与交互实现，协同 UI 与后端团队完成响应式布局与多端适配。',
     achievements: [
-      '实现页面动态效果与前后端数据交互，对接后端接口',
-      '完成图片上传、表单提交等核心功能的开发与调试',
-      '完成页面兼容性测试与适配，覆盖 Chrome、Firefox、IE11 等主流浏览器'
+      '负责前端 Web 项目开发，协同 UI 团队完成各页面布局与交互，并与后端对接完成前后端数据交互',
+      '负责微信小程序、H5 页面功能的开发与适配，保障多端体验一致',
+      '负责各页面响应式布局与多屏幕尺寸适配，完成主流浏览器的兼容性适配与测试'
     ],
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'LayUI']
+    technologies: ['Vue 2', 'Bootstrap', 'Sass', 'TypeScript']
   }
 ])
 
@@ -335,81 +323,99 @@ const workExperienceData = ref<WorkExperienceItem[]>([
 const projectExperienceData = ref<ProjectExperienceItem[]>([
   {
     id: 1,
-    period: '2024.04 - 2025.03',
-    name: 'AI赛马竞猜平台',
-    role: '.NET开发工程师',
-    description: '集赛马赛事直播、AI赛果预测、投注交易、社区互动于一体的综合型竞猜平台，面向赛马爱好者提供一站式赛事参与服务。',
+    period: '2025.10 - 2026.08',
+    name: '韩国股票交易平台',
+    role: '.NET 开发工程师',
+    description: '面向韩国 C 端用户打造的标准化股票交易系统，核心覆盖实时行情查询、在线交易下单、订单管理等交易全流程。',
     achievements: [
-      '独立完成PC端、移动端落地页开发，实现全端响应式布局适配',
-      '负责登录注册、个人信息管理、赛事信息展示、投注交易、论坛互动等核心模块开发',
-      '基于ML.NET搭建赛马结果预测模型，整合历史赛事数据完成模型训练与调优'
+      '负责个人信息管理、钱包、交易、订单管理等核心板块的页面布局与数据交互开发',
+      '承担后端接口开发，参与股票行情数据获取、前端所需数据接口设计与前后端联调',
+      '前端采用 Vue3 + Vuetify + Sass，适配韩国本地化交互习惯，保障界面响应速度与操作流畅度',
+      '后端基于 .NET Core + EFCore 输出标准化接口，对接第三方行情数据源，并通过 SignalR 实时推送行情变动与订单状态'
     ],
-    technologies: ['Vue 3', 'Layui-vue', 'ASP.NET Core', 'EFCore', 'SignalR', 'ML.NET']
+    technologies: ['Vue 3', 'Vuetify', 'Sass', '.NET Core', 'EF Core', 'SignalR']
   },
   {
     id: 2,
-    period: '2023.03 - 2024.03',
-    name: '韩国股票交易平台',
-    role: '.NET开发工程师',
-    description: '面向韩国C端用户的标准化股票交易系统，核心覆盖实时行情查询、在线交易下单、全生命周期订单管理等业务功能。',
+    period: '2024.10 - 2025.09',
+    name: '在线营销短信平台',
+    role: '.NET 开发工程师',
+    description: 'SaaS 类在线营销短信服务平台，支持文本短信、多媒体短信与国际短信三类发送场景，服务中小客户的轻量化营销触达需求。',
     achievements: [
-      '负责个人信息管理、钱包模块、交易页面、订单管理等模块的页面布局与交互逻辑开发',
-      '对接股票行情数据源，完成高并发场景下的接口与查询逻辑调优',
-      '重构数据库慢查询逻辑，新增接口限流、事务锁机制，解决高并发下的订单超卖问题'
+      '负责阿里云、云片等第三方短信服务商的接口对接，保障短信链路的稳定性与可靠性',
+      '完成接口适配、短信发送、状态回调、计费统计等全链路核心功能开发',
+      '前端采用 Vue2 + Bootstrap + ASP.NET Core 完成页面布局与交互，后端以 .NET Core + SignalR + EFCore 实现数据持久化与业务快速迭代',
+      '基于 WPF + HandyControl 开发 Windows 桌面客户端，实现登录注册、短信发送、发送记录查询等功能'
     ],
-    technologies: ['Vue 3', 'Vuetify', 'ASP.NET Core', 'EFCore', 'SignalR', 'MySQL']
+    technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core', 'EF Core', 'SignalR', 'WPF', 'HandyControl']
   },
   {
     id: 3,
-    period: '2022.08 - 2023.02',
-    name: '在线营销短信平台',
-    role: '.NET开发工程师',
-    description: '面向企业客户的SaaS类在线营销短信服务平台，支持文本短信、多媒体短信、国际短信三类发送场景。',
+    period: '2024.01 - 2024.10',
+    name: '漫画在线阅读平台',
+    role: '.NET 开发工程师',
+    description: '面向韩国年轻用户群体的在线漫画阅读社区，涵盖漫画阅读、评论收藏、社区互动等核心功能。',
     achievements: [
-      '负责第三方短信服务商的接口对接及核心功能开发，保障短信链路的稳定性',
-      '适配阿里云、云片等5家主流第三方短信服务商接口，实现短信发送、状态回调、计费统计全链路功能',
-      '基于WPF + HandyControl开发Windows桌面客户端，实现登录注册、短信批量发送、发送记录查询等功能'
+      '负责项目前端技术架构搭建，完成登录注册、漫画阅读、个人中心、区论坛等核心业务页面的开发交付',
+      '搭建后台管理系统，完成用户管理、漫画资源管理、论坛内容审核及批量整合操作',
+      '前端采用 Vue2 + Bootstrap5 完成交互逻辑开发与适配优化，保障多端访问一致性',
+      '后端基于 ASP.NET Core MVC 前后端分离架构，实现业务逻辑的快速迭代；设计并实现帖子分类、发布、编辑、评论、多级权限管理等全链路论坛功能'
     ],
-    technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core', 'EFCore', 'SignalR', 'WPF']
+    technologies: ['Vue 2', 'Bootstrap 5', 'ASP.NET Core MVC']
   },
   {
     id: 4,
-    period: '2021.11 - 2022.07',
-    name: '漫画在线阅读平台',
-    role: '.NET开发工程师',
-    description: '面向韩国年轻用户群体的漫画在线阅读社区，涵盖漫画阅读、评论收藏、社区互动等核心功能。',
+    period: '2023.01 - 2023.12',
+    name: 'AI 赛马竞猜平台',
+    role: '.NET 开发工程师',
+    description: '集赛马赛事直播、AI 赛果预测、投注交易、社区互动于一体的综合型赛马竞猜平台。',
     achievements: [
-      '负责项目前端技术架构搭建，完成登录注册、漫画阅读、个人中心、论坛模块等核心业务页面开发',
-      '设计并实现帖子分类、发布、编辑、评论、多级权限管理等全链路论坛功能',
-      '搭建后台管理系统的用户管理、漫画资源管理、论坛内容审核模块'
+      '负责前端项目架构搭建，完成登录注册、个人信息管理、赛事信息展示、投注交易、论坛互动、客服系统等核心模块的页面布局与数据交互',
+      '负责项目落地页开发及后端接口开发，支撑业务功能快速上线',
+      '前端采用 Vue3 + Layui-vue + Sass，统一页面组件规范与样式标准；后端基于 ASP.NET Core + EFCore 搭建服务层',
+      '使用 SignalR 实现赛事实时数据推送与消息提醒等实时交互功能',
+      '基于 ML.NET 搭建赛马结果预测模型，整合历史赛事数据完成模型训练与调优'
     ],
-    technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core MVC', 'MySQL']
+    technologies: ['Vue 3', 'Layui-vue', 'Sass', 'ASP.NET Core', 'EF Core', 'SignalR', 'ML.NET']
   },
   {
     id: 5,
-    period: '2020.11 - 2021.10',
-    name: '虚拟币交易平台',
-    role: '.NET开发工程师',
-    description: '面向韩国市场的多币种虚拟币交易平台，支持中、英、韩三种语言，提供安全、稳定、低延迟的交易服务。',
+    period: '2022.01 - 2022.12',
+    name: '客户反馈系统',
+    role: '前端开发工程师',
+    description: '交易产品体系内的客户反馈收集与问题跟踪系统，覆盖反馈提交、问题流转与处理状态跟踪等环节。',
     achievements: [
-      '负责用户中心、钱包管理等核心业务模块的功能设计与代码实现',
-      '基于SignalR实现实时行情推送、交易记录实时同步，通过消息队列削峰、增量数据推送降低传输延迟',
-      '开发钱包管理全链路功能，覆盖钱包开通、充值提现、贷款还款等12个核心场景',
-      '基于Blazor + MudBlazor搭建定制化加密币行情展示模块'
+      '负责反馈提交、反馈列表与处理状态跟踪等模块的页面开发与数据交互',
+      '对接后端接口，完成反馈数据的提交、查询与流转，保证反馈闭环可追溯',
+      '配合业务团队持续迭代反馈处理流程，提升客户问题的响应效率'
     ],
-    technologies: ['Vue', 'Vuetify', 'Blazor', 'MudBlazor', 'ASP.NET Core', 'EFCore', 'MySQL', 'SignalR']
+    technologies: ['Vue', 'ASP.NET Core', 'EF Core']
   },
   {
     id: 6,
-    period: '2019.10 - 2020.10',
+    period: '2020.11 - 2022.12',
+    name: '虚拟币交易平台',
+    role: '前端开发工程师',
+    description: '面向韩国市场的多币种虚拟币交易平台，支持中、英、韩三种语言，提供安全、稳定、低延迟的交易服务。',
+    achievements: [
+      '负责用户中心、钱包管理等核心业务模块的功能设计与代码实现',
+      '基于 SignalR 实现实时行情推送与交易记录同步，通过消息队列削峰、增量数据推送降低传输延迟',
+      '开发钱包管理全链路功能，覆盖钱包开通、充值提现、贷款还款等 12 个核心场景',
+      '基于 Blazor + MudBlazor 搭建定制化加密币行情展示模块'
+    ],
+    technologies: ['Vue', 'Vuetify', 'Blazor', 'MudBlazor', 'ASP.NET Core', 'EF Core', 'MySQL', 'SignalR']
+  },
+  {
+    id: 7,
+    period: '2019.08 - 2020.10',
     name: '韩国期货交易平台',
     role: '前端开发工程师',
-    description: '面向韩国中小期货投资者的专业交易平台，覆盖Web端、WinForm客户端，包含期货实时行情查看、在线交易下单等功能。',
+    description: '面向韩国中小期货投资者的专业交易平台，覆盖 Web 端与 WinForm 客户端，包含期货实时行情查看、在线交易下单等功能。',
     achievements: [
-      '负责Web端交易平台的页面开发与交互逻辑落地，对接后端服务接口',
-      '承担Web端与WinForm客户端的性能优化、问题修复工作',
-      '负责公司官方网站的开发工作，适配PC、移动端不同尺寸完成多端适配',
-      '负责移动端APK的打包、测试、上线发布及后续维护'
+      '负责 Web 端交易平台的页面开发与交互逻辑落地，对接后端服务接口',
+      '承担 Web 端与 WinForm 客户端的性能优化与问题修复工作',
+      '负责公司官方网站开发，适配 PC 与移动端不同尺寸完成多端适配',
+      '负责移动端 APK 的打包、测试、上线发布及后续维护'
     ],
     technologies: ['Vue 2', 'Bootstrap', 'ASP.NET Core', 'EF Core', 'SignalR']
   }

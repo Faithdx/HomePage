@@ -26,15 +26,15 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   scrollSpeed: 2,
   images: () => [
-    { src: '/images/notePin客户端.png', alt: 'Image 9' },
-    { src: '/images/notePin-web-5.png', alt: 'Image 8' },
-    { src: '/images/notePin-web-4.png', alt: 'Image 7' },
-    { src: '/images/notePin-web-3.png', alt: 'Image 6' },
-    { src: '/images/notePin-web-5.png', alt: 'Image 5' },
-    { src: '/images/notePin-web-4.png', alt: 'Image 4' },
-    { src: '/images/notePin-web-3.png', alt: 'Image 3' },
-    { src: '/images/notePin-web-2.png', alt: 'Image 2' },
-    { src: '/images/notePin-web.png', alt: 'Image 1' },
+    { src: '/images/flownote-hero.png', alt: 'FlowNote 官网首页' },
+    { src: '/images/flownote-features.png', alt: 'FlowNote 核心功能' },
+    { src: '/images/flownote-todo.png', alt: 'FlowNote 待办工作流' },
+    { src: '/images/flownote-ai.png', alt: 'FlowNote AI 能力' },
+    { src: '/images/flownote-editor.png', alt: 'FlowNote 块编辑器' },
+    { src: '/images/flownote-mindmap.png', alt: 'FlowNote 思维导图' },
+    { src: '/images/flownote-share.png', alt: 'FlowNote 在线分享' },
+    { src: '/images/flownote-pricing.png', alt: 'FlowNote 价格方案' },
+    { src: '/images/flownote-download.png', alt: 'FlowNote 多端下载' },
   ]
 })
 
